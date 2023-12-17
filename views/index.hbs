@@ -1,0 +1,16 @@
+<div class="container my-3">
+    <h1>Browse latest coding articles: ({{this.count}})</h1>
+    <hr>
+    {{#each documents}}
+        <div class="p-4 shadow-sm border rounded">
+            <h2><a href="/post/{{this.$id}}" class="text-dark">{{this.title}}</a></h2>
+            <p class="text-muted mb-1">Published: {{formatDate this.$createdAt}}</p>
+            <p class="mb-2">{{this.tagline}}</p>
+            <a href="/post/{{this.$id}}" class="btn btn-sm btn-danger">Read More &raquo;</a>
+        </div>
+    {{/each}}
+</div>
+
+<script>
+    document.title = 'Home | HuntingCoder'
+</script>
